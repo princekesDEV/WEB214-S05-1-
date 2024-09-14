@@ -4,24 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accessibility</title>
+    <style>
+      nav a:focus {
+        outline: 2px solid #000;
+        background-color: #e0e0e0;
+      }
+      @media (max-width: 600px) {
+        nav ul {
+          display: block;
+          padding: 0;
+        }
+        nav ul li {
+          display: block;
+          margin: 0;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- ### Problem Statement
-Implement a clear and intuitive navigation menu that allows users to easily move between
-different sections of the exhibit.
-Consider using ARIA attributes (e.g., aria-label, aria-current) to enhance the accessibility of the
-navigation. -->
-    <div
-      id="percent-loaded"
-      role="progressbar"
-      aria-valuenow="75"
-      aria-valuemin="0"
-      aria-valuemax="100"
-    >
-      Hello Prince
-    </div>
-    <div>
-      Prince Kesharwani
-    </div>
+    <nav aria-label="Exhibit Navigation">
+      <ul>
+        <li><a href="#section1" aria-current="page">Home</a></li>
+        <li><a href="#section2">About</a></li>
+        <li><a href="#section3">Contact</a></li>
+        <li><a href="#section4">Login</a></li>
+      </ul>
+    </nav>
+    <section id="section1">
+      <h1>Home</h1>
+      <p>Welcome to the understanding of aria tags and attribute</p>
+    </section>
+    <section id="section2">
+      <h1>About</h1>
+      <p>About us</p>
+    </section>
+    <section id="section3">
+      <h1>Contact</h1>
+      <p>Contacts for connecting to us</p>
+    </section>
+    <section id="section4">
+      <h1>Login</h1>
+      <p>Please login</p>
+    </section>
   </body>
 </html>
